@@ -1,9 +1,13 @@
 package com.side.backend.auth
 
+import com.side.backend.auth.request.CreateVerifyCodeRequest
 import com.side.backend.auth.request.UserRegistrationRequest
 import com.side.backend.auth.request.UserUpdateRequest
+import com.side.backend.auth.response.SuccessfulResponse
 import com.side.backend.auth.response.UserRegistrationResponse
 import com.side.backend.auth.response.UserResponse
+import com.side.backend.common.util.Logger.Companion.log
+import kotlinx.coroutines.runBlocking
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -13,11 +17,13 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 import java.util.UUID
 
+// userId 일단 path로 받는데, 나중엔 헤더 쿠키에서 가져와야 해요.
+
 @RestController
 class UserController(
     private val userService: UserService,
 ) {
-    @PostMapping("/customers")
+    @PostMapping("/users")
     fun register(
         @RequestBody request: UserRegistrationRequest,
     ): ResponseEntity<UserRegistrationResponse> {
@@ -25,12 +31,12 @@ class UserController(
         return ResponseEntity.ok().body(UserRegistrationResponse.from(customerRegistration))
     }
 
-    @GetMapping("/customers/{id}")
+    @GetMapping("/users/{id}")
     fun retrieve(
         @PathVariable id: UUID,
     ): ResponseEntity<UserResponse> = ResponseEntity.ok().body(UserResponse.from(userService.retrieve(id)))
 
-    @PutMapping("/customers/{id}")
+    @PutMapping("/users/{id}")
     fun update(
         @PathVariable id: UUID,
         @RequestBody request: UserUpdateRequest,
@@ -38,4 +44,10 @@ class UserController(
         with(userService.update(id, request)) {
             return ResponseEntity.ok().body(UserResponse.from(this))
         }
+
+    @PostMapping("/users/verify")
+    fun verify(@RequestBody request: CreateVerifyCodeRequest): ResponseEntity<SuccessfulResponse> {
+        runBlocking {  userService.smsVerify(phone = request.phone) }
+        return ResponseEntity.ok().body(SuccessfulResponse())
+    }
 }

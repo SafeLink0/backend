@@ -49,6 +49,7 @@ dependencies {
     implementation(Dependencies.springBootDevTools)
 
     implementation(Dependencies.testContainersJunitJupiter)
+    implementation(Dependencies.coroutines)
     implementation(Dependencies.testContainersMySql)
     implementation(Dependencies.aws_sdk_sns)
     implementation(Dependencies.mySqlConnector)

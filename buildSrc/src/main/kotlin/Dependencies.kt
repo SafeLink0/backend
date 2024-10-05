@@ -1,4 +1,6 @@
 object Dependencies {
+    const val coroutines: String = "org.jetbrains.kotlinx:kotlinx-coroutines-core:_"
+
     const val kotlinReflect: String = "org.jetbrains.kotlin:kotlin-reflect"
     const val jacksonKotlin: String = "com.fasterxml.jackson.module:jackson-module-kotlin"
 
