@@ -1,6 +1,6 @@
-package com.side.backend.service
+package com.side.backend.auth
 
-import com.side.backend.domain.User
+import com.side.backend.auth.domain.User
 import org.springframework.data.jpa.repository.JpaRepository
 import java.util.UUID
 

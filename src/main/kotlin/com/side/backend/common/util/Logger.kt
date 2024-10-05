@@ -1,4 +1,4 @@
-package com.side.backend.util
+package com.side.backend.common.util
 
 import io.github.oshai.kotlinlogging.KLogger
 import io.github.oshai.kotlinlogging.KotlinLogging

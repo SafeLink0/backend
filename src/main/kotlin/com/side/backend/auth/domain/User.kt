@@ -1,6 +1,6 @@
-package com.side.backend.domain
+package com.side.backend.auth.domain
 
-import com.side.backend.api.request.UserUpdateRequest
+import com.side.backend.auth.request.UserUpdateRequest
 import jakarta.persistence.*
 import java.util.UUID
 
@@ -21,7 +21,7 @@ class User(
     @Column
     var terms: Boolean = false
 
-    fun update(request: com.side.backend.api.request.UserUpdateRequest) {
+    fun update(request: UserUpdateRequest) {
         email = request.email;
         phone = request.phone;
         nickname = request.nickname;

@@ -1,10 +1,9 @@
-package com.side.backend.api
+package com.side.backend.auth
 
-import com.side.backend.api.request.UserRegistrationRequest
-import com.side.backend.api.request.UserUpdateRequest
-import com.side.backend.api.response.UserRegistrationResponse
-import com.side.backend.api.response.UserResponse
-import com.side.backend.service.UserService
+import com.side.backend.auth.request.UserRegistrationRequest
+import com.side.backend.auth.request.UserUpdateRequest
+import com.side.backend.auth.response.UserRegistrationResponse
+import com.side.backend.auth.response.UserResponse
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable

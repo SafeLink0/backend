@@ -1,5 +1,6 @@
-package com.side.backend.service.dto
+package com.side.backend.auth.dto
 
+import com.side.backend.auth.domain.User
 import java.util.UUID
 
 data class UserDto(
@@ -11,7 +12,7 @@ data class UserDto(
     val terms: Boolean,
 ) {
     companion object {
-        fun from(entity: com.side.backend.domain.User): UserDto =
+        fun from(entity: User): UserDto =
             UserDto(
                 userId = entity.userId,
                 email = entity.email,

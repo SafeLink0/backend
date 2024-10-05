@@ -1,7 +1,7 @@
-package com.side.backend.service.dto
+package com.side.backend.auth.dto
 
 
-import com.side.backend.domain.User
+import com.side.backend.auth.domain.User
 
 
 data class UserRegistrationDto(

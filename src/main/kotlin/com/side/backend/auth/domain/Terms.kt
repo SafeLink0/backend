@@ -1,4 +1,4 @@
-package com.side.backend.domain
+package com.side.backend.auth.domain
 
 import jakarta.persistence.*
 import java.util.UUID
@@ -14,7 +14,7 @@ class Terms(
     @OneToOne(fetch = FetchType.LAZY, cascade = [CascadeType.ALL])
     @MapsId
     @JoinColumn(name = "userId")
-    var user: com.side.backend.domain.User,
+    var user: User,
 ) {
     @Column
     var role: String = "부모"

@@ -1,4 +1,4 @@
-package com.side.backend.api.request
+package com.side.backend.auth.request
 
 data class UserRegistrationRequest(
     val email: String,

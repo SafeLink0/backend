@@ -1,6 +1,6 @@
-package com.side.backend.api.response
+package com.side.backend.auth.response
 
-import com.side.backend.service.dto.UserRegistrationDto
+import com.side.backend.auth.dto.UserRegistrationDto
 
 
 data class UserRegistrationResponse(

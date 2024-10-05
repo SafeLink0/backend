@@ -1,7 +1,7 @@
-package com.side.backend.api.response
+package com.side.backend.auth.response
 
 
-import com.side.backend.service.dto.UserDto
+import com.side.backend.auth.dto.UserDto
 
 
 data class UserResponse(

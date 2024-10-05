@@ -1,6 +1,6 @@
-package com.side.backend.api.exception
+package com.side.backend.common.exception
 
-import com.side.backend.util.Logger.Companion.log
+import com.side.backend.common.util.Logger.Companion.log
 import org.springframework.http.HttpStatus
 import org.springframework.http.ProblemDetail
 import org.springframework.web.bind.annotation.ExceptionHandler

@@ -1,11 +1,11 @@
-package com.side.backend.service
+package com.side.backend.auth
 
-import com.side.backend.api.request.UserUpdateRequest
-import com.side.backend.api.request.UserRegistrationRequest
-import com.side.backend.domain.User
-import com.side.backend.service.dto.UserDto
-import com.side.backend.service.dto.UserRegistrationDto
-import com.side.backend.util.Logger.Companion.log
+import com.side.backend.auth.request.UserUpdateRequest
+import com.side.backend.auth.request.UserRegistrationRequest
+import com.side.backend.auth.domain.User
+import com.side.backend.auth.dto.UserDto
+import com.side.backend.auth.dto.UserRegistrationDto
+import com.side.backend.common.util.Logger.Companion.log
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
