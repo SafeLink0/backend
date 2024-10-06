@@ -46,8 +46,8 @@ class UserController(
         }
 
     @PostMapping("/users/verify")
-    fun verify(@RequestBody request: CreateVerifyCodeRequest): ResponseEntity<SuccessfulResponse> {
-        runBlocking {  userService.smsVerify(phone = request.phone) }
+    suspend fun verify(@RequestBody request: CreateVerifyCodeRequest): ResponseEntity<SuccessfulResponse> {
+        userService.smsVerify(phone = request.phone)
         return ResponseEntity.ok().body(SuccessfulResponse())
     }
 }

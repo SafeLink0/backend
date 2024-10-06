@@ -35,8 +35,9 @@ allOpen {
 dependencies {
     implementation(Dependencies.kotlinReflect)
     implementation(Dependencies.jacksonKotlin)
+    implementation(Dependencies.reactor)
 
-    implementation(Dependencies.springBootStarterWeb)
+    implementation(Dependencies.springBootStarterWebFlux)
     implementation(Dependencies.springBootStarterJpa)
     implementation(Dependencies.springBootStarterActuator)
     implementation(Dependencies.springBootStarterTest) {

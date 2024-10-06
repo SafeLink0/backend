@@ -1,10 +1,11 @@
 object Dependencies {
     const val coroutines: String = "org.jetbrains.kotlinx:kotlinx-coroutines-core:_"
+    const val reactor: String = "org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.6.4"
 
     const val kotlinReflect: String = "org.jetbrains.kotlin:kotlin-reflect"
     const val jacksonKotlin: String = "com.fasterxml.jackson.module:jackson-module-kotlin"
 
-    const val springBootStarterWeb: String = "org.springframework.boot:spring-boot-starter-web"
+    const val springBootStarterWebFlux: String = "org.springframework.boot:spring-boot-starter-webflux"
     const val springBootStarterJpa: String = "org.springframework.boot:spring-boot-starter-data-jpa"
     const val springBootStarterActuator: String = "org.springframework.boot:spring-boot-starter-actuator"
     const val springBootStarterTest: String = "org.springframework.boot:spring-boot-starter-test"
