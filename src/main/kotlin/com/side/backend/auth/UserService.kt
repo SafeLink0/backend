@@ -37,7 +37,10 @@ class UserService(
                 phone = request.phone,
                 role = request.role,
             )
-        val user = userRepository.save(customer)  // 중복 회원 예외 처리 필요
+        if (userRepository.findByPhone(request.phone).isNotEmpty()) {
+            throw RuntimeException()
+        }
+        val user = userRepository.save(customer)
         val tokens = jwtUtils.generateTokens(user.userId)
         val saveRefreshTokenEntity = RefreshToken(
             refreshToken = tokens[1],

@@ -7,4 +7,5 @@ import java.util.UUID
 
 @Repository
 interface UserRepository : JpaRepository<User, UUID> {
+    fun findByPhone(phone: String?): List<User?>
 }
