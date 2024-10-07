@@ -56,6 +56,9 @@ dependencies {
     implementation(Dependencies.mySqlConnector)
     runtimeOnly(Dependencies.h2db)
     implementation(Dependencies.logging)
+    implementation(Dependencies.tokenApi)
+    implementation(Dependencies.tokenImpl)
+    implementation(Dependencies.tokenJackson)
 
     testImplementation(Dependencies.kotestCore)
     testImplementation(Dependencies.kotestAssertions)

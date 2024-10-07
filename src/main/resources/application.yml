@@ -1,6 +1,9 @@
 server:
   port: 12345
 
+config:
+  secretKey: secretKeysecretKeysecretKeysecretKeysecretKeysecretKeysecretKeysecretKeysecretKeysecretKey
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -9,7 +12,7 @@ spring:
     password: user
   jpa:
     hibernate:
-      ddl-auto: create # production -> validate
+      ddl-auto: update # production -> validate
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect

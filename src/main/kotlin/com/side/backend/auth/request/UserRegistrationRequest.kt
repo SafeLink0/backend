@@ -6,4 +6,5 @@ data class UserRegistrationRequest(
     val role: String,
     val nickname: String,
     val terms: Boolean,
+    val code: Int
 )

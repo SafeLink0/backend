@@ -34,4 +34,7 @@ object Dependencies {
     const val fixtureMonkeyJackson = "com.navercorp.fixturemonkey:fixture-monkey-jackson:_"
 
     const val aws_sdk_sns = "aws.sdk.kotlin:sns:_"
+    const val tokenApi: String = "io.jsonwebtoken:jjwt-api:_"
+    const val tokenImpl: String = "io.jsonwebtoken:jjwt-impl:_"
+    const val tokenJackson: String = "io.jsonwebtoken:jjwt-jackson:_"
 }
