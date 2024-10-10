@@ -13,7 +13,6 @@ import javax.crypto.SecretKey
 
 @Component
 class JwtUtils(@Value("\${config.secretKey}") private val secretKey: String) {
-
     @PostConstruct
     private fun createSignKey(): SecretKey {
         val keyBytes = Decoders.BASE64.decode(secretKey)
