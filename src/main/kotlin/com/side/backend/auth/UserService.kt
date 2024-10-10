@@ -65,7 +65,8 @@ class UserService(
     }
 
     fun deleteUser(id: UUID): Boolean {
-        userRepository.deleteById(id)
+        val user = userRepository.findById(id).orElseThrow { IllegalArgumentException("User not found") }
+        userRepository.delete(user)
         return true
     }
 
