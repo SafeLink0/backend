@@ -10,6 +10,7 @@ object Dependencies {
     const val springBootStarterActuator: String = "org.springframework.boot:spring-boot-starter-actuator"
     const val springBootStarterTest: String = "org.springframework.boot:spring-boot-starter-test"
     const val springBootDockerCompose: String = "org.springframework.boot:spring-boot-docker-compose"
+    const val springSecurity: String = "org.springframework.boot:spring-boot-starter-security"
 
     const val springBootConfigurationProcessor: String = "org.springframework.boot:spring-boot-configuration-processor"
     const val springBootTestContainers: String = "org.springframework.boot:spring-boot-testcontainers"

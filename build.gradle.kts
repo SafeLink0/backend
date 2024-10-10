@@ -40,6 +40,7 @@ dependencies {
     implementation(Dependencies.springBootStarterWebFlux)
     implementation(Dependencies.springBootStarterJpa)
     implementation(Dependencies.springBootStarterActuator)
+    implementation(Dependencies.springSecurity)
     implementation(Dependencies.springBootStarterTest) {
         exclude(module = "mockito-core")
     }
